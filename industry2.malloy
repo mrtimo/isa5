@@ -74,7 +74,7 @@ source: sic4 is duckdb.table('./SICcodes.csv') extend {
 
 
 
-source: sub is duckdb.table('./sub*.parquet') extend {
+source: sub is duckdb.table('./subAll.parquet') extend {
     dimension: major_code is trunc(sic / 100)
     dimension: industry_code is trunc(sic / 10)
     dimension: division is trunc(sic / 1000)
